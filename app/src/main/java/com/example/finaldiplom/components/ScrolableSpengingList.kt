@@ -60,7 +60,7 @@ fun SpendingItem(spending: Spending) {
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // Текстовая информация
+
         Column(
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.Center
@@ -69,7 +69,6 @@ fun SpendingItem(spending: Spending) {
                     "Category: ${spending.category} \nNote: ${spending.note}")
         }
 
-        // Кнопка с иконкой
         IconButton(
             onClick = { spendingViewModel.deleteSpending(spending.id) },
             modifier = Modifier.align(Alignment.CenterVertically)

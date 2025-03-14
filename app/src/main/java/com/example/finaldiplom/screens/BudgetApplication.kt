@@ -146,7 +146,7 @@ fun BudgetApplication(navController: NavController, budgetViewModel: BudgetViewM
                     .padding(top = 350.dp)
                     .shadow(10.dp, shape = RoundedCornerShape(20.dp))
                     .clip(RoundedCornerShape(20.dp))
-                    .background(Color(0xFFA7C7E7)) // Используем полупрозрачный фон (80% непрозрачности)
+                    .background(Color(0xFFA7C7E7))
             )
 
             if (selectedDate != null) {

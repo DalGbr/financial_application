@@ -65,7 +65,7 @@ fun Calendar(
             calendarUiModel = data.getData(
                 startDate = finalStartDate, lastSelectedDate = calendarUiModel.selectedDate.date
             )
-        }, navController = navController // Передаем navController
+        }, navController = navController
         )
 
         CalendarContent(data = calendarUiModel, onDateClickListener = { date ->
@@ -75,7 +75,7 @@ fun Calendar(
                         isSelected = it.date.isEqual(date.date)
                     )
                 })
-            onDateSelected(date) // Вызываем onDateSelected при клике
+            onDateSelected(date)
         }, navController)
     }
 }

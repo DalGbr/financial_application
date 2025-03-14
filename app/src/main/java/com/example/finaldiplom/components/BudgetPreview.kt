@@ -51,8 +51,6 @@ fun BudgetPreview(
             readOnly = true
         )
 
-//        Text(text = "Balance: " + budgetAmount.toString()+"€", fontSize = 25.sp, modifier = Modifier.padding(top = 10.dp))
-
         Button(
             onClick = { navController.navigate(Screens.addBudget.name) },
             modifier = Modifier.align(Alignment.CenterVertically).padding(start = 15.dp, end = 5.dp)
