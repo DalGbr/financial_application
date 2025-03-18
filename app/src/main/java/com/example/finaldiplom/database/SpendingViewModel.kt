@@ -12,6 +12,7 @@ import com.example.finaldiplom.enums.Category
 import com.example.finaldiplom.enums.Status
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class SpendingViewModel(): ViewModel() {
     val spendingDao = MainActivity.spendingDatabase.getSpendingDao()
@@ -33,6 +34,20 @@ class SpendingViewModel(): ViewModel() {
     fun deleteSpending(id: Int) {
         viewModelScope.launch(Dispatchers.IO) {
             spendingDao.deleteSpending(id)
+        }
+    }
+
+    fun getBudgetById(id: Int): Budget? {
+        return spendingDao.getBudgetById(id)
+    }
+
+    fun checkAndCreateBudget() {
+        viewModelScope.launch(Dispatchers.IO) {
+            val budgetWithId1 = spendingDao.getBudgetById(1)
+            if (budgetWithId1 == null) {
+                val newBudget = Budget(id = 1, amount = 0f)
+                spendingDao.addBudget(newBudget)
+            }
         }
     }
 

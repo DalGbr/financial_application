@@ -28,6 +28,12 @@ interface SpendingDataAccessObject {
     @Insert
     fun addSpending(spending: Spending)
 
+    @Query("SELECT * FROM BUDGET WHERE ID = :id LIMIT 1")
+    fun getBudgetById(id: Int): Budget?
+
+    @Insert
+    fun addBudget(budget: Budget)
+
     @Query("SELECT amount FROM BUDGET WHERE ID = :id")
     fun getBudget(id: Int): LiveData<Float>
 
