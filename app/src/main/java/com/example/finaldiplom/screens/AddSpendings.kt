@@ -77,6 +77,7 @@ fun DialogForAddingSpendings(date: String, navController: NavController) {
                     imageVector = Icons.Filled.ArrowBack, contentDescription = "Back"
                 )
             }
+            Text(text = "Add record", modifier = Modifier.padding(start = 110.dp, top = 10.dp))
         }
 
         Box(modifier = Modifier.padding(horizontal = 30.dp)) {

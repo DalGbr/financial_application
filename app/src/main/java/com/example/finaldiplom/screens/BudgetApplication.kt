@@ -79,7 +79,6 @@ fun BudgetApplication(navController: NavController, budgetViewModel: BudgetViewM
                 .background(Color(0xCCB6D0E2))
         ) {
 
-            ///для верха
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -91,8 +90,6 @@ fun BudgetApplication(navController: NavController, budgetViewModel: BudgetViewM
                     .background(Color(0xFFA7C7E7))
             )
 
-
-            ///для  календаря
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -103,7 +100,6 @@ fun BudgetApplication(navController: NavController, budgetViewModel: BudgetViewM
                     .background(Color(0xFFD1D8E0))
             )
 
-            ///для бюджета
             Box(
                 modifier = Modifier
                     .fillMaxWidth()

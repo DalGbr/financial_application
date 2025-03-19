@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
             .build()
 
         val spendingViewModel: SpendingViewModel = ViewModelProvider(this).get(SpendingViewModel::class.java)
-        spendingViewModel.checkAndCreateBudget() // Проверка и создание бюджета с id = 1
+        spendingViewModel.checkAndCreateBudget()
 
         enableEdgeToEdge()
         setContent {
